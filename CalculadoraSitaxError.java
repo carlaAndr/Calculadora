@@ -190,33 +190,37 @@ public static boolean operadoresJuntos(String cad){
           res=true;
         i++;
         } 
-    
     return res;
 }
     
-
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
 
-        //pruebas de sintaxis
-        System.out.println(pruebaSyntax("m34-(95.4/12)"));
-        System.out.println(pruebaSyntax("m34-(95.4*/12)"));
-        System.out.println(pruebaSyntax(""));
-        System.out.println(pruebaSyntax("34/0"));
-        System.out.println(pruebaSyntax("+2"));
-        System.out.println(pruebaSyntax("(89)-45+(6"));
-        System.out.println(pruebaSyntax("87+"));
-        
-        //pruebas de convertidor
-        System.out.println(convertidorArray("m34-(95.4/12)").toString());
-        System.out.println(convertidorArray("12/7+13^5").toString());
-        System.out.println(convertidorArray("90+(m25+5)").toString());
-        System.out.println(convertidorArray("2^3/7").toString());
-       
+  //Crear objetos de las clases
+MetodoCalcula mc=new MetodoCalcula();
+infPosf inf=new infPosf();
+CalculadoraSitaxError sx=new CalculadoraSitaxError();
+Boolean b;
+String cad="m34-(95.4/12)";
+ArrayList <String> arList= new ArrayList();
+ArrayList <String> arList2= new ArrayList();
+Double res;
 
+//b=pruebaSyntax(cad);
+
+    if (pruebaSyntax(cad)){
+    arList=convertidorArray(cad);
+    arList2=infPosf.Convertir(arList);
+    res=MetodoCalcula.calcula(arList2);
+        System.out.println(res);
+    }
+    else {
+            System.out.println("Error ");  // !!!!!!
     }
 
+
+}
 }
