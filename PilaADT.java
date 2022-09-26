@@ -2,12 +2,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
  */
-package Calculadora;
+package programascalculadora;
+
 /**
- *
- * @author Carla Andrea
+ * 
+ * Interface encargada de designar funcionamiento de la pila.
  */
 public interface PilaADT <T>{
+    
     public void push(T dato);
     public boolean isEmpty();
     public T pop();

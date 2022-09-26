@@ -2,22 +2,26 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Calculadora;
+package programascalculadora;
+
 import java.util.ArrayList;
 
 /**
- *
- * @author frida
+ * Resuelve operación de tipo postfija.
+ * 
  */
 public class MetodoCalcula {
     
     /**
-     * Metodo que recibe la expresion en postfijo y utiliza pilas para calcular el resultado final de la operacion 
+     * <pre>
+     * Recibe un ArrayList cuyos elementos están ordenados de acuerdo a una expresión de tipo postfijo.
+     * Utiliza pilas para calcular el resultado final de la operacion. 
+     * </pre>
      * @param postfijo
-     * es un ArrayList de String
+     *   Es un ArrayList de String, cuyos elementos están ordenados de manera postfija.
      * @return double
-     * es un numero, el resultado de la operacion
-     * en caso de hacer una operacion que sea indefinida, se arroja NaN (not a number) como resultado
+     *   Es un numero. Es el resultado de la operacion.
+     * En caso de hacer una operacion que sea indefinida, se arroja NaN (not a number) como resultado.
      */
     
     public static double calcula (ArrayList <String> postfijo){
@@ -64,11 +68,12 @@ public class MetodoCalcula {
     }
     
     /**
-     * Metodo que identifica los numeros y operadores que hay en la operación
-     * @param str
-     * es un String 
+     * <pre> 
+     * Indica si el carácter ingresado es un número.
+     * </pre>
+     * @param str String
      * @return boolean
-     * regresa un boolean, es false si el String es un operador y true si es un numero
+     *   Es false si el String es un operador y true si es un numero.
      */
     
     public static boolean esNumero (String str){
@@ -78,29 +83,5 @@ public class MetodoCalcula {
         } 
         return res;
     }
-    
-   /*
-    public static void main(String[] args) {
-        
-        ArrayList postfijo = new ArrayList <String>();
-        
-        postfijo.add("3");
-        postfijo.add("2");
-        postfijo.add("4");
-        postfijo.add("*");
-        postfijo.add("1");
-        postfijo.add("1");
-        postfijo.add("+");
-        postfijo.add("3");
-        postfijo.add("^");
-        postfijo.add("/");
-        postfijo.add("+");
-     
-     
-       System.out.println(calcula(postfijo));
-       
-    }*/
-     
 }
-
 
