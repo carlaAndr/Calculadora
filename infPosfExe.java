@@ -16,7 +16,7 @@ public class infPosfExe {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        ArrayList<String> a = CalculadoraSitaxError.convertidorArray("6+(2-1)*(9^(2*1))");
+        ArrayList<String> a = CalculadoraSitaxError.convertidorArray("5*(1-3)+8");
 
         System.out.println(infPosf.Convertir(a));
     }
